@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white px-6 py-3 shadow-md gap-3">
+    <!-- Left side: Logo + Website Name -->
+    <div class="flex items-center gap-2 justify-center sm:justify-start">
+      <img src="assets/logo.png" alt="Logo" class="w-10 h-10 rounded-full">
+      <span class="font-bold text-xl text-green-500">Emergency<br>Service</span>
+    </div>
+
+    <!-- Right side: Counts -->
+    <div class="flex items-center justify-center gap-3 flex-wrap">
+      <!-- Heart Count -->
+      <div class="flex items-center gap-2 w-20 h-10 bg-red-100 rounded-full justify-center">
+        <span id="heartCount">0</span>
+        <img src="assets/heart.png" alt="Heart" class="w-5 h-5">
+      </div>
+
+      <!-- Coin Count -->
+      <div class="flex items-center gap-2 w-24 h-10 bg-yellow-100 rounded-full justify-center">
+        <span id="coinCount">100</span>
+        <img src="assets/coin.png" alt="Coin" class="w-5 h-5">
+      </div>
+
+      <!-- Copy Count -->
+      <div class="flex items-center gap-2 w-20 h-10 bg-blue-100 rounded-full justify-center">
+        <span id="copyCount">0</span>
+        <span class="font-medium">Copy</span>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Hero Section -->
+<section class="w-full h-70 bg-gradient-to-b from-green-400 via-green-500 to-green-600 flex flex-col items-center justify-between py-10">
+  
+  <!-- Top Logo -->
+  <div class="mt-6">
+    <img src="assets/logo-dark.png" alt="Logo" class="w-24 h-24 object-contain">
+  </div>
+
+  <!-- Section Title -->
+  <h1 class="text-white text-4xl font-bold text-center">
+    Emergency Service Directory
+  </h1>
+
+  <!-- Slogan -->
+  <p class="text-white text-center text-lg mt-6 px-4 max-w-2xl">
+    Government service at your fingertips - a project by Government of Bangladesh
+  </p>
+
+</section>
+
+
+
+<section class="px-20 py-10 bg-gray-100 ">
+  
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
+    
+    <!-- Font Awesome CDN --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- ===== Left Column: Card Section ===== --> 
+       <div> <h2 class="text-2xl font-bold mb-6">Emergency Hotline</h2>
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+      
+
+
+        <!-- ===== Card 1 ===== -->
+        <div class=" bg-white rounded-lg shadow-md p-3 relative flex flex-col justify-between h-60">
+          
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/police.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">পুলিশ</p>
+              <p class="text-sm text-gray-500 mb-1">Police</p>
+             <p class="text-lg font-semibold mb-1">Hotline: 999</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1 mb-2">Emergency</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            <!-- Copy Button + Category Badge -->
+            <div class="flex flex-col items-end">
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="999">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+           <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Police" data-number="999">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+          </div>
+        </div>
+
+
+
+           <!-- ===== Card 2 ===== -->
+        <div class="bg-white rounded-lg shadow-md p-4 relative flex flex-col justify-between h-60">
+          
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/ambulance.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">অ্যাম্বুলেন্স</p>
+              <p class="text-sm text-gray-500 mb-1">Ambulance</p>
+              <p class="text-lg font-semibold mb-1">Hotline: 194-999</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">Health</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            <!-- Copy Button + Category Badge -->
+            <div class="flex flex-col items-end">
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="194-999">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+            <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Ambulance" data-number="194-999">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+          </div>
+        </div>
+
+
+          <!-- ===== Card 3 ===== -->
+        <div class="bg-white rounded-lg shadow-md p-4 relative flex flex-col justify-between h-60">
+          
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/Bangladesh-Railway.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">বাংলাদেশ রেলওয়ে</p>
+              <p class="text-sm text-gray-500 mb-1">Bangladesh Railway</p>
+             <p class="text-lg font-semibold mb-1">Hotline: 131</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">Railway</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            <!-- Copy Button + Category Badge -->
+            <div class="flex flex-col items-end">
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="131">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+             <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Banghladesh Railway" data-number="131">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+          </div>
+        </div>
+
+
+          <!-- ===== Card 4  ===== -->
+        <div class="bg-white rounded-lg shadow-md p-4 relative flex flex-col justify-between h-60 ">
+          
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+    
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/emergency.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">সহায়তা কেন্দ্র</p>
+              <p class="text-sm text-gray-500 mb-1">Help Centre</p>
+              <p class="text-lg font-semibold mb-1">Hotline: 333</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">Emergency</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            <!-- Copy Button + Category Badge -->
+            <div class="flex flex-col items-end">
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="333">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+               <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Help Centre Line" data-number="333">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+          </div>
+        </div>
+
+
+
+          <!-- ===== Card 5 ===== -->
+      
+        <div class="bg-white rounded-lg shadow-md p-4 relative flex flex-col justify-between h-60">
+          <div>
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button></div>
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/emergency.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">দুর্নীতি দমন কমিশন</p>
+              <p class="text-sm text-gray-500 mb-1">Anti-Corruption</p>
+              <p class="text-lg font-semibold mb-1">Hotline: 106</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">Emergency</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            <!-- Copy Button + Category Badge -->
+            <div class="flex flex-col items-end">
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="106">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+                <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Anti-Corruption" data-number="106">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+          </div>
+        </div>
+
+
+
+
+             <!-- ===== Card 6 ===== -->
+      
+        <div class="bg-white rounded-lg shadow-md p-4 relative flex flex-col justify-between h-60">
+          <div>
+          <!-- Heart Icon Top-Right -->
+          <button class="card-heart absolute top-2 right-2 w-8 h-8 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center hover:bg-gray-300 heart-btn">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button></div>
+
+          <!-- Service Info -->
+          <div class="flex items-center gap-3 space-y-4">
+            <img src="assets/fire-service.png" alt="Police" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold mb-1">ফায়ার সার্ভিস</p>
+              <p class="text-sm text-gray-500 mb-1">Fire Service</p>
+              <p class="text-lg font-semibold mb-1">Hotline: 999</p>
+               <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">Emergency</span>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="flex justify-between items-end mt-auto">
+            
+            <div class="flex flex-col items-end">
+              <!-- Copy Button -->
+              <button class="copy-btn mt-3 flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600" data-number="999">
+              <i class="fa-regular fa-copy"></i> Copy
+              </button>
+             
+            </div>
+
+            
+            <!-- Call Button -->
+           <button class="call-btn mt-3 flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600"
+             data-service="Fire Service" data-number="999">
+            <i class="fa-solid fa-phone"></i> Call
+             </button>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+ 
+
+    <!-- ===== Call History Section ===== -->
+<div class="w-full h-30 bg-white rounded-lg shadow-md p-4 mt-6 max-w-3xl mx-auto">
+  <div class="flex justify-between items-center mb-3">
+    <h2 class="text-lg font-semibold flex items-center gap-2">
+      <i class="fa-solid fa-clock-rotate-left text-green-600"></i>
+       Call History
+    </h2>
+    <button id="clearHistory" class="bg-green-400 text-white p-2 rounded-full hover:bg-gray-400">
+     clear 
+    </button>
+  </div>
+  <ul id="historyList" class="text-sm text-gray-700 space-y-2">
+    <li class="text-gray-500">No history available.</li>
+  </ul>
+</div>
+
+   
+
+
+
+  </div>
+</section>
+
+
+
+
+<!-- JavaScript part -->
+<script>
+  // Select all heart buttons in cards
+  const heartButtons = document.querySelectorAll('.card-heart');
+  const navbarHeartCount = document.getElementById('heartCount');
+
+  heartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Increment the navbar heart count
+      navbarHeartCount.textContent = parseInt(navbarHeartCount.textContent) + 1;});
+  });
+</script>
+
+
+
+
+
+<script>
+  const coinCount = document.getElementById("coinCount");
+  const callButtons = document.querySelectorAll(".call-btn");
+  const historyList = document.getElementById("historyList");
+  const clearHistoryBtn = document.getElementById("clearHistory");
+
+  callButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      let coins = parseInt(coinCount.textContent);
+      const service = button.dataset.service;
+      const number = button.dataset.number;
+
+      if (coins < 20) {
+        alert("Not enough coins to make a call!");
+        return;
+      }
+
+      // Deduct coins
+      coins -= 20;
+      coinCount.textContent = coins;
+
+      // Show alert
+      alert(`Calling ${service} (${number})`);
+
+      // Get timestamp
+      const now = new Date();
+      const timeString = now.toLocaleString(); // e.g. "9/13/2025, 10:22 AM"
+
+      // Add to history
+      if (historyList.children[0] && historyList.children[0].textContent.includes("No history")) {
+        historyList.innerHTML = ""; // clear placeholder
+      }
+
+      const li = document.createElement("li");
+      li.className = "bg-gray-50 p-2 rounded-md shadow-sm";
+      li.innerHTML = `
+      <div class="flex justify-between">
+          <span><span class="font-semibold">${service}</span> - ${number}</span>
+          <span class="text-xs text-gray-500">${timeString}</span>
+        </div>
+        `;
+      historyList.prepend(li); // latest call on top
+    });
+  });
+
+  // Clear History Button
+  clearHistoryBtn.addEventListener("click", () => {
+    historyList.innerHTML = `<li class="text-gray-500">No history available.</li>`;
+  });
+</script>
+
+
+<script>
+  const copyButtons = document.querySelectorAll(".copy-btn");
+  const copyCount = document.getElementById("copyCount");
+
+  copyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const number = button.dataset.number;
+
+      // Copy to clipboard
+      navigator.clipboard.writeText(number).then(() => {
+        alert(`Hotline number ${number} copied!`);
+
+        // Increase copy count in navbar
+        copyCount.textContent = parseInt(copyCount.textContent) + 1;
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>
